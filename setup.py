@@ -8,7 +8,7 @@ setup(
     author='Shahzaib Mumtaz',
     author_email='shahzaib.mumtaz.20195@gmail.com',
     zip_safe=False,
-    packages = ['django_drf_jwt']
+    packages = ['django_drf_jwt'],
     install_requires=[
         'Django',
         'djangorestframework',
