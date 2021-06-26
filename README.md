@@ -1,12 +1,12 @@
 # Django REST Framework JWT Example
 
-A simple app to demonstrate django-jwt-authentication using Django REST Framework
+A simple app to use django-jwt-authentication using Django REST Framework
 ## Running the Project Locally
 
-First, clone the repository to your local machine:
+First, add this to your requirements file of the project:
 
 ```bash
-git clone https://github.com/ShahzaibMumtaz07/django-rest-jwt.git
+-e git+ssh://git@github.com/ShahzaibMumtaz07/django_drf_jwt.git#egg=django_drf_jwt
 ```
 
 Install the requirements:
@@ -14,8 +14,25 @@ Install the requirements:
 ```bash
 pip install -r requirements.txt
 ```
+Add app to the INSTALLED_APPS in the project:
+```bash
+INSTALLED_APPS = [
+    ...,
+    'django_drf_jwt',
+    ...,
+]
+```
+Include the app urls in your project urls.py:
+```bash
+from django.urls import path, include
 
-Apply the migrations:
+urlpatterns = [
+    path('django_drf_jwt/', include('django_drf_jwt.urls'))
+]
+```
+
+
+Apply the migrations if not applied:
 
 ```bash
 python manage.py migrate
@@ -27,5 +44,5 @@ Finally, run the development server:
 python manage.py runserver
 ```
 
-The API endpoints will be available at **127.0.0.1:8000/hello/**.
+The API endpoints will be available at **127.0.0.1:8000/django_drf_jwt/api-token-auth/**
 
