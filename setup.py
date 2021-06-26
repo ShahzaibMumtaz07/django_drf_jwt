@@ -5,16 +5,17 @@ with open("README.md", "r") as fh:
 
 setup(
     name='django_drf_jwt',
-    version='0.0.3',
+    version='0.0.6',
     description='A simple app to demonstrate django-jwt-authentication using Django REST Framework',
     url='https://github.com/ShahzaibMumtaz07/django_drf_jwt.git',
     author='Shahzaib Mumtaz',
     author_email='shahzaib.mumtaz.20195@gmail.com',
-    packages = find_packages(),
+    package_dir = {'django_drf_jwt':'django_drf_jwt'},
+    packages = ['django_drf_jwt'],
     install_requires=[
-        'Django',
-        'djangorestframework',
-        'djangorestframework-jwt',
+        'Django>=2.0.0',
+        'djangorestframework>=3.12.4',
+        'djangorestframework-jwt>=1.11.0',
         
       ],
     license = 'MIT',
