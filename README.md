@@ -6,7 +6,7 @@ A simple app to use django-jwt-authentication using Django REST Framework
 First, add this to your requirements file of the project:
 
 ```bash
--e git+ssh://git@github.com/ShahzaibMumtaz07/django_drf_jwt.git#egg=django_drf_jwt
+pip install django-drf-jwt
 ```
 
 Install the requirements:
