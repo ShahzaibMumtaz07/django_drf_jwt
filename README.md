@@ -3,10 +3,10 @@
 A simple app to use django-jwt-authentication using Django REST Framework
 ## Running the Project Locally
 
-First, add this to your requirements file of the project:
+In your requirements.txt:
 
 ```bash
-pip install django-drf-jwt
+django-drf-jwt
 ```
 
 Install the requirements:
@@ -14,7 +14,9 @@ Install the requirements:
 ```bash
 pip install -r requirements.txt
 ```
-Add app to the INSTALLED_APPS in the project:
+
+In your settings.py:
+
 ```bash
 INSTALLED_APPS = [
     ...,
@@ -22,7 +24,9 @@ INSTALLED_APPS = [
     ...,
 ]
 ```
-Include the app urls in your project urls.py:
+
+In urls.py of project:
+
 ```bash
 from django.urls import path, include
 
@@ -32,17 +36,18 @@ urlpatterns = [
 ```
 
 
-Apply the migrations if not applied:
+Make and Apply migrations:
 
 ```bash
+python mananage.py makemigrations
 python manage.py migrate
 ```
 
 Finally, run the development server:
 
 ```bash
-python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
 ```
 
-The API endpoints will be available at **127.0.0.1:8000/django_drf_jwt/api-token-auth/**
+Endpoint:**127.0.0.1:8000/django_drf_jwt/api-token-auth/**
 
